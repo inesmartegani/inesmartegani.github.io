@@ -1,17 +1,90 @@
 <!DOCTYPE html>
 <html>
   
-<head> 
+<head> <!--Contenido NO visible para visitantes de la pagina-->
   <meta charset="utf-8">
-  <title> Título de página </title>  
+  <title> Página web GitHub Inés </title>  <!--Titulo que aparece en el navegador-->
+
+<style> /* Estilo */
+
+h2
+{ 
+	font-family: Agency FB;
+  font-size: xx-large;
+}
+
+p
+
+{
+	color: black; /*comentarios en CSS*/
+	font-family: Agency FB;
+  font-size: x-large;
+  font-style: oblique;
+}
+
+#alinear {
+  text-align: center;
+}
+
+#saludo {
+  text-align: center;
+}
+
+.naranja {
+  color: black;
+  background-color: #ED7500;
+}
+
+.amarillo {
+  color:black;
+  background-color: #FFC300;
+}
+
+div {
+  position: absolute;
+  left: 42%;
+  right: 50%;
+}
+</style>
+
 </head>
 
-<body>
-<h1> <em>&#9749</em> Ines Martegani <em>&#9749</em> </h1>
-  
-<p> Mi primer párrafo </p> 
+<body bgcolor= #63CAA7></body> <!--Contenido visible-->
+
+ <h2 id='alinear'><span class="naranja"><em>&#9749</em> Inés Martegani <em>&#9749</em></span></h2>
+ 
+</br>
+    <button onclick= "Saludar()">Hola!</button>
+      <p id="saludo"></p>
+
+</br>
+<p id='alinear'> <span class="amarillo"> Probando párrafos </span></p> 
+
+</br>
+</br>
+<div><img src = "meme gatito.jpg" alt ="meme" title = "Meme gatito"></div>
+		
 </body>
 
+
+
+<script>
+function Saludar(){ //para que funcione el boton
+	var saludo="";
+	var tiempo=new Date().getHours()
+
+	if(tiempo<12){
+		saludo="Buenos dias";
+	}else if(tiempo<18){
+		saludo="Buenas tardes";
+	}else{
+	saludo="Buenas noches";
+	}
+document.getElementById("saludo").innerHTML=saludo;
+}
+
+
+</script>
 </html>
 
   
