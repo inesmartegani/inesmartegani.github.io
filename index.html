@@ -1,91 +1,134 @@
 <!DOCTYPE html>
-<html>
-  
-<head> <!--Contenido NO visible para visitantes de la pagina-->
-  <meta charset="utf-8">
-  <title> Página web GitHub Inés </title>  <!--Titulo que aparece en el navegador-->
-
-<style> /* Estilo */
-
-h2
-{ 
-	font-family: Agency FB;
-  font-size: xx-large;
-}
-
-p
-
-{
-	color: black; /*comentarios en CSS*/
-	font-family: Agency FB;
-  font-size: x-large;
-  font-style: oblique;
-}
-
-#alinear {
-  text-align: center;
-}
-
-#saludo {
-  text-align: center;
-}
-
-.naranja {
-  color: black;
-  background-color: #ED7500;
-}
-
-.amarillo {
-  color:black;
-  background-color: #FFC300;
-}
-
-div {
-  position: absolute;
-  left: 42%;
-  right: 50%;
-}
-</style>
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Inés Martegani</title>
+    
+    <!-- Bootstrap CSS via CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- CSS archivo local-->
+    <link rel="stylesheet" href="styles/style.css">
 </head>
+<body>
+    <div class="card mat-card" id="first-card"> <!--Primer recuadro-->
+        <div id="profile-background"><img src= "images/portada.jpg"> </div>
+        <div id="info" style="padding: 20px">
+            <div id="info-img">
+                <img class= "profile-image" style="border-radius: 70%; 
+                           width: 170px;
+                           height: 170px;"
+                    src= "images/foto_CV.jpg">  
+                <div class= "btn-edit"><a href="#" class="btn-right"><i class="fa fa-pen"></i></a></div> <!--boton editar LAPICITO-->
+            </div>
+            <div id= "info-data"> <!--Información abajo de la foto de perfil-->
+                <div>
+                    <h1>Inés Martegani</h1>
+                    <div id= "info-company">Ingeniera Forestal</div>
+                    <div id= "info-contact">
+                        <span>Buenos Aires (Argentina)</span>
+                        <span><a href="#">Información de contacto</a></span> <!-- con # cambia de forma el puntero del mouse "señala"-->
+                    </div>
+                </div>
+                 <!-- Lista desordenada--> <!--o poner el logo entero-->
+                <ul id= "info-details">
+                    <li><a href="#">   
+                        <img src="images/logo_UNLP.png">
+                        <h2>Universidad Nacional de La Plata</h2>
+                    </a></li>
+                    <li><a href="#">
+                        <img src="images/logo_FCAyF.jpg">
+                        <h2>Facultad de Ciencias Agrarias y Forestales</h2>
+                    </a></li>
+                </ul>
+            </div>
+            <div id="info-actions">
+                <button type="button" class="btn btn-primary">Tengo interés en</button>
+                <button type="button" class="btn btn-light">Añadir Sección</button>
+                <button type="button" class="btn btn-light">Más</button>
+            </div>
+        </div>
+        
+    </div>
 
-<body bgcolor= #63CAA7></body> <!--Contenido visible-->
+    <div class="card mat-card"> <!--Segundo recuadro-->
+        <div class= "card-titles">
+            <h2>Acerca de</h2>
+            <div class="btn-edit">
+                <a href="#" class="btn-right">
+                    <i class="fa fa-pen"></i>
+                </a>
+            </div>
+        </div>
+        <div>
+            <p id="text-acercade">26 años</p>
+        </div>
+        <div>
+            <input id="edit-acercade" type="text" oninput="myFunction2(this.value)" style="display:none;">
+        </div>
 
- <h2 id='alinear'><span class="naranja"><em>&#9749</em> Inés Martegani <em>&#9749</em></span></h2>
- 
-</br>
-    <button onclick= "Saludar()">Hola!</button>
-      <p id="saludo"></p>
+    </div>
 
-</br>
-<p id='alinear'> <span class="amarillo"> Probando párrafos </span></p> 
+    <div class="card mat-card"> <!--Tercer recuadro-->
+        <div class= "card-titles">
+            <h2>Formación académica</h2>
+            <ul id="form_academica">
+                <li><h4>Ingeniería Forestal</h4>
+                    <li>Facultad de Ciencias Agrarias y Forestales (FCAyF) - Universidad Nacionalde La Plata (UNLP) | 2014 - 2021 </li>
+                    <li>Promedio con y sin aplazos: 8,21</li>
+                </li>
+                <li><h4>Analista Programador Universitario</h4>
+                    <li>Facultad de Informática - Universidad Nacional de La Plata (UNLP) | 2021</li>
+                    <li>Actualmente cursando primer año</li>
+                </li>
+                <li> <h4>Agroecología</h4>
+                    <li>Montpellier SupAgro. Montpellier, Francia | 2019</li>
+                    <li>Principios de la Agroecología y Transición agroecológica - ProgramaArFAgri</li>
+                </li>
+            </ul>
+        </div>
+    </div>
 
-</br>
-</br>
-<div><img src = "meme gatito.jpg" alt ="meme" title = "Meme gatito"></div>
-		
+    <div class="card mat-card"> <!--Cuarto recuadro-->
+        <div class= "card-titles">
+            <h2>Formación profesional</h2>
+            <ul id="form_profesional"><h5>Capacitaciones</h5>
+                <li><h6>Curso de Facilitadores/as Agroecológicos</h6>
+                    <li>Capacitación virtual a cargo del Ministerio de Desarrollo Agrario de laProvincia de Buenos Aires | 2021
+                        
+                    </li>
+                </li>
+                <li><h6>Argentina Programa</h6>
+                    <li> Ministerio de Desarrollo Productivo de la Nación y CámaraEmpresarial de Software y Servicios Informáticos (CESSI) | 2021 - presente
+                </li>
+
+                <li><h6>Producción de plantas nativas</h6>
+                    <li>Curso virtual destinado a viveristas del noreste bonaerense - INTA SanPedro | 2021</li>
+                </li>
+
+                <li><h6>Teledetección Óptica</h6>
+                    <li>Unidad de Formación Masiva (UFM) de la Comisión Nacional de ActividadesEspaciales (CONAE) | 2020</li>
+                </li>
+                <li><h6>Apicultura</h6>
+                    <li>Facultad de Ciencias Agrarias y Forestales (FCAyF) - Universidad Nacionalde La Plata (UNLP) | 2017</li>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card mat-card"> <!--Quinto recuadro--> <!--los puse con dos DIV pero podria ponerlos en lista como UL-->
+        <div class= "card-titles">
+            <h2>Idiomas</h2>
+            <div>Inglés avanzado</div>
+            <div>Francés avanzado (B2)Alianza Francesa, BuenosAires | 2018</div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin= "anonymous"></script>
+
 </body>
-
-
-
-<script>
-function Saludar(){ //para que funcione el boton
-	var saludo="";
-	var tiempo=new Date().getHours()
-
-	if(tiempo<12){
-		saludo="Buenos dias";
-	}else if(tiempo<18){
-		saludo="Buenas tardes";
-	}else{
-	saludo="Buenas noches";
-	}
-document.getElementById("saludo").innerHTML=saludo;
-}
-
-
-</script>
 </html>
-
-  
-  
