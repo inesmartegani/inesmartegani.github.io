@@ -14,6 +14,9 @@
     padding: 0px;
 }
 
+div#profile-background{
+    display:flex;
+}
 /*foto de portada*/
 div#profile-background img{
     width: 100%;
@@ -25,6 +28,10 @@ div#profile-background img{
     margin-top: -110px;
     z-index: 1;
 }
+
+.fa-pencil-alt{
+    font-size: 24px;
+ }
 
 /*Información de abajo de las fotos de portada y perfil*/
 div#info-data{
@@ -99,6 +106,8 @@ ul.items-list li div.data-container a {
 
 }
 
+
+/*formacion académica y profesional*/
 ul#form_academica {
     list-style: none inside;
     line-height: 1.5;
